@@ -11,6 +11,8 @@ public class Launcher {
             }
             gui.message("\nPuzzle Solved!");
         }
+        /*this catches a purposely thrown exception
+        * to end the game*/
         catch (StackOverflowError a) {
             gui.message("\nDone.");
         }
