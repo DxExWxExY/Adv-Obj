@@ -45,7 +45,7 @@ public class BoardPanel extends JPanel {
         this.board = board;
         addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
-            	int xy = locateSquaree(e.getX(), e.getY());
+            	int xy = locateSquare(e.getX(), e.getY());
             	if (xy >= 0) {
             		listener.clicked(xy / 100, xy % 100);
             	}
@@ -64,9 +64,9 @@ public class BoardPanel extends JPanel {
      * The indexes are encoded and returned as x*100 + y, 
      * where x and y are 0-based column/row indexes.
      */
-    private int locateSquaree(int x, int y) {
-    	if (x < 0 || x > board.size * squareSize
-    			|| y < 0 || y > board.size * squareSize) {
+    private int locateSquare(int x, int y) {
+    	if (x < 0 || x > board.size() * squareSize
+    			|| y < 0 || y > board.size() * squareSize) {
     		return -1;
     	}
     	int xx = x / squareSize;
@@ -81,15 +81,30 @@ public class BoardPanel extends JPanel {
 
         // determine the square size
         Dimension dim = getSize();
-        squareSize = Math.min(dim.width, dim.height) / board.size;
+        squareSize = Math.min(dim.width, dim.height) / board.size();
 
         // draw background
         final Color oldColor = g.getColor();
         g.setColor(boardColor);
-        g.fillRect(0, 0, squareSize * board.size, squareSize * board.size);
+        g.fillRect(0, 0, squareSize * board.size(), squareSize * board.size());
 
         // WRITE YOUR CODE HERE ...
-        // i.e., draw grid and squares.
+        drawLines(g);
     }
+    /*This method is used for drawing the box border and the grid of the board size*/
+    private void drawLines(Graphics g){
+        /*this draws the border lines*/
+        g.setColor(Color.BLACK);
+        g.drawLine(0, 0, squareSize * board.size(), 0); //top line
+        g.drawLine(0, 0, 0, squareSize * board.size()); //left line
+        g.drawLine(0, squareSize * board.size(), squareSize * board.size(), squareSize * board.size()); //bottom line
+        g.drawLine(squareSize * board.size(), 0, squareSize * board.size(), squareSize * board.size()); //right line
+        /*For loop for drawing the grid using */
+        for (int i=0;i<276;i=i+squareSize) {
+            g.drawLine(i, 0, i, squareSize * board.size()); //Vertical
+            g.drawLine(0, i, squareSize * board.size(), i); //Horizontal
+        }
+    }
+
 
 }

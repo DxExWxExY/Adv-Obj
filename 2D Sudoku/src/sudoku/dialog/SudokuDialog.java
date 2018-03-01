@@ -88,8 +88,8 @@ public class SudokuDialog extends JFrame {
      * @param size Requested puzzle size, either 4 or 9.
      */
     private void newClicked(int size) {
-        // WRITE YOUR CODE HERE ...
-        //
+        board = new Board(size);
+        boardPanel.setBoard(board);
         showMessage("New clicked: " + size);
     }
 
@@ -109,7 +109,7 @@ public class SudokuDialog extends JFrame {
         JPanel buttons = makeControlPanel();
         // boarder: top, left, bottom, right
         buttons.setBorder(BorderFactory.createEmptyBorder(10,16,0,16));
-        add(buttons, BorderLayout.NORTH);
+        add(buttons, BorderLayout.SOUTH);
         
         JPanel board = new JPanel();
         board.setBorder(BorderFactory.createEmptyBorder(10,16,0,16));
@@ -118,7 +118,7 @@ public class SudokuDialog extends JFrame {
         add(board, BorderLayout.CENTER);
         
         msgBar.setBorder(BorderFactory.createEmptyBorder(10,16,10,0));
-        add(msgBar, BorderLayout.SOUTH);
+        add(msgBar, BorderLayout.NORTH);
     }
       
     /** Create a control panel consisting of new and number buttons. */
