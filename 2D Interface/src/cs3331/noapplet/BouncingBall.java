@@ -13,6 +13,93 @@ import cs3331.noapplet.NoApplet;
  */
 @SuppressWarnings("serial")
 public class BouncingBall extends NoApplet {
+    private Ball ball = new Ball();
+
+    private Image image;
+    private Graphics offScreen;
+    private Dimension dim;
+
+    private Timer timer;
+    private int delay = 10;
+
+    @Override
+    public void init() {
+        String param = getParameter("delay");
+        if (param != null) {
+            delay = Integer.parseInt(param);
+        }
+        dim = getSize();
+        ball.x = dim.width * 2 / 3;
+        ball.y = dim.height - ball.radius;
+        timer = new Timer(delay, e -> repaint());
+    }
+
+    @Override
+    public void update(Graphics g) {
+        // create an off-screen image and its grapchics
+        if (image == null) {
+            image = createImage(dim.width, dim.height);
+            offScreen = image.getGraphics();
+        }
+
+        // fill the background
+        offScreen.setColor(Color.white);
+        offScreen.fillRect(0, 0, dim.width, dim.height);
+
+        // adjust the position of the ball
+        if (ball.x < ball.radius || ball.x > dim.width - ball.radius) {
+            ball.dx = -ball.dx;
+        }
+        if (ball.y < ball.radius || ball.y > dim.height - ball.radius) {
+            ball.dy = -ball.dy;
+        }
+        ball.x += ball.dx;
+        ball.y += ball.dy;
+
+        // draw the ball and dump the off-screen image
+        offScreen.setColor(ball.color);
+        offScreen.fillOval(ball.x - ball.radius, ball.y - ball.radius, ball.radius * 2, ball.radius * 2);
+        g.drawImage(image,  0,  0,  this);
+    }
+
+    @Override
+    public void paint(Graphics g) {
+        update(g);
+    }
+
+    /** Start the animation. */
+    @Override
+    public void start() {
+        timer.start();
+    }
+
+    /** Stop the animation. */
+    @Override
+    public void stop() {
+        timer.stop();
+    }
+
+   /* public static void main(String[] args) {
+        new BouncingBall().run();
+    }*/
+}
+
+/*
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Image;
+import javax.swing.Timer;
+import cs3331.noapplet.NoApplet;
+
+*/
+/**
+ * Sample NoApplet showing a ball moving inside a rectangular box.
+ * See Section 5.5.3 on pages 195-197.
+ *//*
+
+@SuppressWarnings("serial")
+public class BouncingBall extends NoApplet {
 
     private int r,gc,b;
     private Color color = Color.CYAN;
@@ -83,19 +170,23 @@ public class BouncingBall extends NoApplet {
         update(g);
     }
 
-    /** Start the animation. */
+    */
+/** Start the animation. *//*
+
     @Override
     public void start() {
         timer.start();
     }
 
-    /** Stop the animation. */
+    */
+/** Stop the animation. *//*
+
     @Override
     public void stop() {
         timer.stop();
     }
 
-    public static void main(String[] args) {
-        new BouncingBall().run();
-    }
-}
+//    public static void main(String[] args) {
+//        new BouncingBall().run();
+//    }
+}*/

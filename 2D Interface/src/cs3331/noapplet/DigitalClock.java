@@ -57,10 +57,10 @@ public class DigitalClock extends NoApplet {
         }
         g.setFont(font);
         g.setColor(color);
-        g.drawString("Pon atencion we"/*String.format("%d:%02d:%02d", hours, minutes, seconds)*/, 10, 60);
+        g.drawString(String.format("%d:%02d:%02d", hours, minutes, seconds), 10, 60);
     }
 
-    /*public static void main(String[] args) {
-        new DigitalClock(new String[] {"width=1024", "height=512"}).run();
-    }*/
+//    public static void main(String[] args) {
+//        new DigitalClock(new String[] {"width=1024", "height=512"}).run();
+//    }
 }

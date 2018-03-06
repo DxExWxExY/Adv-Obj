@@ -3,12 +3,12 @@ package sudoku.dialog;
 import java.awt.*;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.image.ImageObserver;
-import java.text.AttributedCharacterIterator;
-
-import javax.swing.JPanel;
-
+import java.io.InputStream;
+import javax.swing.*;
 import sudoku.model.Board;
+import sun.audio.AudioPlayer;
+import sun.audio.AudioStream;
+
 
 /**
  * A special panel class to display a Sudoku board modeled by the
@@ -25,7 +25,6 @@ public class BoardPanel extends JPanel {
 
         /**
          * Callback to notify clicking of a square.
-         *
          * @param x 0-based column index of the clicked square
          * @param y 0-based row index of the clicked square
          */
@@ -35,7 +34,7 @@ public class BoardPanel extends JPanel {
     /**
      * Background color of the board.
      */
-    private static final Color boardColor = new Color(247, 223, 150);
+    private static Color boardColor = new Color(70, 70, 70);
 
     /**
      * Board to be displayed.
@@ -43,19 +42,17 @@ public class BoardPanel extends JPanel {
     private Board board;
 
     /**
-     * Width and height of a square in pixels.
+     * Width and height of a square in pixels and other useful variables.
      */
-    public int squareSize;
-    public int sx;
-    public int sy;
-    public boolean highlightSqr;
-    public boolean notAllowed;
+    private int squareSize;
+    public int sx, sy;
+    public boolean highlightSqr, invalid, reset, win;
 
     /**
      * Create a new board panel to display the given board.
      */
-    public BoardPanel(Board board, ClickListener listener) {
-        System.out.println("BoardPanel");
+    BoardPanel(Board board, ClickListener listener) {
+//        System.out.println("BoardPanel");
         this.board = board;
         addMouseListener(new MouseAdapter() {
             public void mouseClicked(MouseEvent e) {
@@ -69,9 +66,11 @@ public class BoardPanel extends JPanel {
 
     /**
      * Set the board to be displayed.
+     * @param board Receives an object of type Board.
+     * @see Board
      */
     public void setBoard(Board board) {
-        System.out.println("setBOard");
+//        System.out.println("setBoard");
         this.board = board;
     }
 
@@ -82,7 +81,7 @@ public class BoardPanel extends JPanel {
      * where x and y are 0-based column/row indexes.
      */
     private int locateSquare(int x, int y) {
-        System.out.println("locateSquare");
+//        System.out.println("locateSquare");
         if (x < 0 || x > board.size() * squareSize
                 || y < 0 || y > board.size() * squareSize) {
             return -1;
@@ -97,28 +96,91 @@ public class BoardPanel extends JPanel {
      */
     @Override
     public void paint(Graphics g) {
-        System.out.println("paint");
+//        System.out.println("paint");
         super.paint(g);
-
         // determine the square size
         Dimension dim = getSize();
         squareSize = Math.min(dim.width, dim.height) / board.size();
-
         // draw background
-        final Color oldColor = g.getColor();
         g.setColor(boardColor);
         g.fillRect(0, 0, squareSize * board.size(), squareSize * board.size());
-
         // WRITE YOUR CODE HERE ...
-        actions(g);
-        drawBoard(g);
+        playSound();
+        highlightInvalid(g);
+        drawNumbers(g);
+        highlightSelected(g);
         insideLines(g);
         outsideBox(g);
+        solved();
     }
 
-    /*This method is used for drawing the box border and the grid of the board size*/
+    /**
+     * This method draws the numbers in the matrix, the color
+     * depends whether it was a valid entry or not.
+     * @param g This method receives the Graphics class to draw the numbers.
+     * */
+    private void drawNumbers(Graphics g) {
+        for (int i = 0; i < board.size(); i++) {
+            for (int j = 0; j < board.size(); j++) {
+                //if the number in the matrix are not 0's
+                if (board.getElement(i, j) != 0) {
+                    //if valid
+                    if (board.isValid(i, j)) {
+                        g.setColor(Color.WHITE);
+                        g.drawString(String.valueOf(board.getElement(i, j)), (j * squareSize) + (squareSize / 2 - 3), (i * squareSize) + (squareSize / 2 + 4));
+                    }
+                    //if not valid
+                    else if (!board.isValid(i, j)) {
+                        g.setColor(Color.BLACK);
+                        g.drawString(String.valueOf(board.getElement(i,j)), (j*squareSize)+(squareSize/2-3), (i*squareSize)+(squareSize/2+4));
+                    }
+                }
+            }
+        }
+    }
+
+    /**
+     * This method highlights a number background if the entry was invalid.
+     * @param g This method receives the Graphics class in order to draw the square.
+     * */
+    private void highlightInvalid(Graphics g) {
+        for (int i = 0; i < board.size(); i++) {
+            for (int j = 0; j < board.size(); j++) {
+                if (!board.isValid(i,j) && board.getElement(i, j) != 0) {
+                    g.setColor(Color.WHITE);
+                    g.fillRect(j*squareSize, i*squareSize, squareSize, squareSize);
+                }
+            }
+        }
+    }
+
+    /**
+     * This method checks if all the numbers in the matrix meet the game rules.
+     * If so, prompts the user to start a new game or to quit.
+     * */
+    private void solved() {
+        if (board.isSolved()) {
+            win = true;
+            playSound();
+            Object[] options = {"New Game", "Exit"};
+            int solved = JOptionPane.showOptionDialog(null,"You Won!",
+                    "Congratulations", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE,
+                    null, options, options[1]);
+            if (solved == JOptionPane.YES_OPTION) {
+                board.reset();
+            }
+            else {
+                System.exit(0);
+            }
+        }
+    }
+
+    /**
+     * This method draw the outside lines to define the sub-grid of the board
+     * @param g This method receives the Graphics class in order to draw the lines
+     * */
     private void outsideBox(Graphics g) {
-        System.out.println("outsideBox");
+//        System.out.println("outsideBox");
         g.setColor(Color.BLACK);
         g.drawLine(0, 0, squareSize * board.size(), 0);             //top line
         g.drawLine(0, 0, 0, squareSize * board.size());             //left line
@@ -133,8 +195,12 @@ public class BoardPanel extends JPanel {
         }
     }
 
+    /**
+     * This method draw the inside lines to define the total rows and columns of the board
+     * @param g method receives the Graphics class in order to draw the lines
+     * */
     private void insideLines(Graphics g) {
-        System.out.println("insideLines");
+//        System.out.println("insideLines");
         g.setColor(Color.gray);
         for (int i = 0; i < 276; i = i + squareSize) {
             g.drawLine(i, 0, i, squareSize * board.size());
@@ -143,28 +209,46 @@ public class BoardPanel extends JPanel {
         }
     }
 
-    private void drawBoard(Graphics g) {
-        for (int i = 0; i < board.size(); i++) {
-            for (int j = 0; j < board.size(); j++) {
-                if (board.getElement(i, j) != 0) {
-                    g.setColor(Color.BLACK);
-                    g.drawString(String.valueOf(board.getElement(i,j)), (i*squareSize)+(squareSize/2-3), (j*squareSize)+(squareSize/2+4));
-                }
+    /**
+     * This method plays a sound depending on which variable was set to true..
+     * */
+    private void playSound() {
+        try {
+            if(invalid) {
+                InputStream song1 = getClass().getResourceAsStream("/sound/error.wav");
+                AudioStream audioStream = new AudioStream(song1);
+                AudioPlayer.player.start(audioStream);
+                invalid = false;
             }
+            else if(reset) {
+                InputStream song1 = getClass().getResourceAsStream("/sound/new.wav");
+                AudioStream audioStream = new AudioStream(song1);
+                AudioPlayer.player.start(audioStream);
+                reset = false;
+            }
+            else if(win) {
+                InputStream song1 = getClass().getResourceAsStream("/sound/win.wav");
+                AudioStream audioStream = new AudioStream(song1);
+                AudioPlayer.player.start(audioStream);
+                win = false;
+            }
+        }
+        catch(Exception ex) {
+            System.out.println("Error with playing sound.");
+            ex.printStackTrace();
         }
     }
 
-    private void actions(Graphics g) {
-        System.out.println("actions");
+    /**
+    * This method paints the pixels of the square selected in the board.
+    * @param g method receives the Graphics class in order to draw the actions
+    * */
+    private void highlightSelected(Graphics g) {
+//        System.out.println("actions");
         if (highlightSqr) {
-            g.setColor(Color.PINK);
-            g.fillRect(sx, sy, squareSize, squareSize);
+            g.setColor(Color.cyan);
+            g.fillRect(sx*squareSize, sy*squareSize, squareSize, squareSize);
             highlightSqr = false;
-        }
-        if (notAllowed) {
-            g.setColor(Color.RED);
-            g.fillRect(sx, sy, squareSize, squareSize);
-            notAllowed = false;
         }
     }
 }
