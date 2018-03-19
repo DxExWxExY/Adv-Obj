@@ -7,6 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb208436-6b4c-4571-b347-3cdaae8e283f" name="Default" comment="Added Different Sounds to Game">
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/2D_Sudoku_jar.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/out/production/2D Sudoku/sudoku/dialog/BoardPanel$1.class" afterPath="$PROJECT_DIR$/out/production/2D Sudoku/sudoku/dialog/BoardPanel$1.class" />
@@ -30,10 +32,9 @@
       <file leaf-file-name="BoardPanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/sudoku/dialog/BoardPanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="53" column="28" lean-forward="false" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+            <state relative-caret-position="2751">
+              <caret line="138" column="9" lean-forward="false" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="9" />
               <folding>
-                <element signature="method#playSound#0;class#BoardPanel#0" expanded="false" />
                 <element signature="method#highlightSelected#0;class#BoardPanel#0" expanded="false" />
               </folding>
             </state>
@@ -43,7 +44,7 @@
       <file leaf-file-name="SudokuDialog.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sudoku/dialog/SudokuDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1300">
+            <state relative-caret-position="1092">
               <caret line="102" column="7" lean-forward="false" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
               <folding>
                 <element signature="method#SudokuDialog#1;class#SudokuDialog#0" expanded="false" />
@@ -61,11 +62,13 @@
       <file leaf-file-name="Board.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sudoku/model/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="252">
               <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
               <folding>
                 <element signature="method#Board#0;class#Board#0" expanded="false" />
                 <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+                <element signature="e#1941#1942#0" expanded="true" />
+                <element signature="e#1979#1980#0" expanded="true" />
                 <element signature="method#setElement#0;class#Board#0" expanded="false" />
                 <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
                 <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
@@ -143,6 +146,9 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,45 +161,10 @@
               <item name="2D Sudoku" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="2D Sudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2D Sudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="image" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2D Sudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2D Sudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sound" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2D Sudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2D Sudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sudoku" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2D Sudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2D Sudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="dialog" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="2D Sudoku" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2D Sudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="sudoku" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -228,7 +199,7 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration name="Unnamed" type="Application" factoryName="Application">
+    <configuration name="Sudoku" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="sudoku.dialog.SudokuDialog" />
       <option name="VM_PARAMETERS" value="" />
@@ -409,7 +380,6 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293348" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -431,6 +401,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293348" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5038168" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -458,12 +429,136 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/sudoku/dialog/SudokuDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="102" column="7" lean-forward="false" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
+          <folding>
+            <element signature="method#SudokuDialog#1;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#boardClicked#0;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#numberClicked#0;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#newClicked#0;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#configureUI#0;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#makeControlPanel#0;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#createImageIcon#0;class#SudokuDialog#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sudoku/model/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding>
+            <element signature="method#Board#0;class#Board#0" expanded="false" />
+            <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
+            <element signature="method#setElement#0;class#Board#0" expanded="false" />
+            <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
+            <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
+            <element signature="method#checkSubGrid#0;class#Board#0" expanded="false" />
+            <element signature="method#isSolved#0;class#Board#0" expanded="false" />
+            <element signature="method#reset#0;class#Board#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sudoku/dialog/BoardPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#playSound#0;class#BoardPanel#0" expanded="false" />
+            <element signature="method#highlightSelected#0;class#BoardPanel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sudoku/dialog/SudokuDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2142">
+          <caret line="102" column="7" lean-forward="false" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
+          <folding>
+            <element signature="method#SudokuDialog#1;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#boardClicked#0;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#numberClicked#0;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#newClicked#0;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#configureUI#0;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#makeControlPanel#0;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#createImageIcon#0;class#SudokuDialog#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sudoku/model/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding>
+            <element signature="method#Board#0;class#Board#0" expanded="false" />
+            <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
+            <element signature="method#setElement#0;class#Board#0" expanded="false" />
+            <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
+            <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
+            <element signature="method#checkSubGrid#0;class#Board#0" expanded="false" />
+            <element signature="method#isSolved#0;class#Board#0" expanded="false" />
+            <element signature="method#reset#0;class#Board#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sudoku/dialog/BoardPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#highlightSelected#0;class#BoardPanel#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sudoku/dialog/SudokuDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1092">
+          <caret line="102" column="7" lean-forward="false" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
+          <folding>
+            <element signature="method#SudokuDialog#1;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#boardClicked#0;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#numberClicked#0;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#newClicked#0;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#configureUI#0;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#makeControlPanel#0;class#SudokuDialog#0" expanded="false" />
+            <element signature="method#createImageIcon#0;class#SudokuDialog#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sudoku/model/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding>
+            <element signature="method#Board#0;class#Board#0" expanded="false" />
+            <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
+            <element signature="method#setElement#0;class#Board#0" expanded="false" />
+            <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
+            <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
+            <element signature="method#checkSubGrid#0;class#Board#0" expanded="false" />
+            <element signature="method#isSolved#0;class#Board#0" expanded="false" />
+            <element signature="method#reset#0;class#Board#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sudoku/dialog/BoardPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
             <element signature="method#highlightSelected#0;class#BoardPanel#0" expanded="false" />
           </folding>
         </state>
@@ -492,6 +587,8 @@
           <folding>
             <element signature="method#Board#0;class#Board#0" expanded="false" />
             <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
             <element signature="method#setElement#0;class#Board#0" expanded="false" />
             <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
             <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
@@ -507,7 +604,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#playSound#0;class#BoardPanel#0" expanded="false" />
             <element signature="method#highlightSelected#0;class#BoardPanel#0" expanded="false" />
           </folding>
         </state>
@@ -536,6 +632,8 @@
           <folding>
             <element signature="method#Board#0;class#Board#0" expanded="false" />
             <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
             <element signature="method#setElement#0;class#Board#0" expanded="false" />
             <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
             <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
@@ -551,7 +649,6 @@
         <state relative-caret-position="1125">
           <caret line="62" column="28" lean-forward="false" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="28" />
           <folding>
-            <element signature="method#playSound#0;class#BoardPanel#0" expanded="false" />
             <element signature="method#highlightSelected#0;class#BoardPanel#0" expanded="false" />
           </folding>
         </state>
@@ -580,6 +677,8 @@
           <folding>
             <element signature="method#Board#0;class#Board#0" expanded="false" />
             <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
             <element signature="method#setElement#0;class#Board#0" expanded="false" />
             <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
             <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
@@ -595,7 +694,6 @@
         <state relative-caret-position="800">
           <caret line="57" column="4" lean-forward="false" selection-start-line="57" selection-start-column="4" selection-end-line="57" selection-end-column="4" />
           <folding>
-            <element signature="method#playSound#0;class#BoardPanel#0" expanded="false" />
             <element signature="method#highlightSelected#0;class#BoardPanel#0" expanded="false" />
           </folding>
         </state>
@@ -624,6 +722,8 @@
           <folding>
             <element signature="method#Board#0;class#Board#0" expanded="false" />
             <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
             <element signature="method#setElement#0;class#Board#0" expanded="false" />
             <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
             <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
@@ -639,7 +739,6 @@
         <state relative-caret-position="975">
           <caret line="56" column="21" lean-forward="false" selection-start-line="56" selection-start-column="21" selection-end-line="56" selection-end-column="21" />
           <folding>
-            <element signature="method#playSound#0;class#BoardPanel#0" expanded="false" />
             <element signature="method#highlightSelected#0;class#BoardPanel#0" expanded="false" />
           </folding>
         </state>
@@ -652,6 +751,8 @@
           <folding>
             <element signature="method#Board#0;class#Board#0" expanded="false" />
             <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
             <element signature="method#setElement#0;class#Board#0" expanded="false" />
             <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
             <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
@@ -683,7 +784,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="method#playSound#0;class#BoardPanel#0" expanded="false" />
             <element signature="method#highlightSelected#0;class#BoardPanel#0" expanded="false" />
           </folding>
         </state>
@@ -712,6 +812,8 @@
           <folding>
             <element signature="method#Board#0;class#Board#0" expanded="false" />
             <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
             <element signature="method#setElement#0;class#Board#0" expanded="false" />
             <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
             <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
@@ -727,7 +829,6 @@
         <state relative-caret-position="4675">
           <caret line="187" column="51" lean-forward="false" selection-start-line="187" selection-start-column="51" selection-end-line="187" selection-end-column="51" />
           <folding>
-            <element signature="method#playSound#0;class#BoardPanel#0" expanded="false" />
             <element signature="method#highlightSelected#0;class#BoardPanel#0" expanded="false" />
           </folding>
         </state>
@@ -756,6 +857,8 @@
           <folding>
             <element signature="method#Board#0;class#Board#0" expanded="false" />
             <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
             <element signature="method#setElement#0;class#Board#0" expanded="false" />
             <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
             <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
@@ -771,7 +874,6 @@
         <state relative-caret-position="4050">
           <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
           <folding>
-            <element signature="method#playSound#0;class#BoardPanel#0" expanded="false" />
             <element signature="method#highlightSelected#0;class#BoardPanel#0" expanded="false" />
           </folding>
         </state>
@@ -784,6 +886,8 @@
           <folding>
             <element signature="method#Board#0;class#Board#0" expanded="false" />
             <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
             <element signature="method#setElement#0;class#Board#0" expanded="false" />
             <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
             <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
@@ -815,7 +919,6 @@
         <state relative-caret-position="4050">
           <caret line="170" column="0" lean-forward="false" selection-start-line="170" selection-start-column="0" selection-end-line="170" selection-end-column="0" />
           <folding>
-            <element signature="method#playSound#0;class#BoardPanel#0" expanded="false" />
             <element signature="method#highlightSelected#0;class#BoardPanel#0" expanded="false" />
           </folding>
         </state>
@@ -828,6 +931,8 @@
           <folding>
             <element signature="method#Board#0;class#Board#0" expanded="false" />
             <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
             <element signature="method#setElement#0;class#Board#0" expanded="false" />
             <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
             <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
@@ -859,7 +964,6 @@
         <state relative-caret-position="2150">
           <caret line="96" column="0" lean-forward="true" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
           <folding>
-            <element signature="method#playSound#0;class#BoardPanel#0" expanded="false" />
             <element signature="method#highlightSelected#0;class#BoardPanel#0" expanded="false" />
           </folding>
         </state>
@@ -872,6 +976,8 @@
           <folding>
             <element signature="method#Board#0;class#Board#0" expanded="false" />
             <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
             <element signature="method#setElement#0;class#Board#0" expanded="false" />
             <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
             <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
@@ -903,7 +1009,6 @@
         <state relative-caret-position="975">
           <caret line="47" column="37" lean-forward="false" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
           <folding>
-            <element signature="method#playSound#0;class#BoardPanel#0" expanded="false" />
             <element signature="method#highlightSelected#0;class#BoardPanel#0" expanded="false" />
           </folding>
         </state>
@@ -932,6 +1037,8 @@
           <folding>
             <element signature="method#Board#0;class#Board#0" expanded="false" />
             <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
             <element signature="method#setElement#0;class#Board#0" expanded="false" />
             <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
             <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
@@ -947,7 +1054,6 @@
         <state relative-caret-position="975">
           <caret line="47" column="37" lean-forward="false" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
           <folding>
-            <element signature="method#playSound#0;class#BoardPanel#0" expanded="false" />
             <element signature="method#highlightSelected#0;class#BoardPanel#0" expanded="false" />
           </folding>
         </state>
@@ -976,6 +1082,8 @@
           <folding>
             <element signature="method#Board#0;class#Board#0" expanded="false" />
             <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
             <element signature="method#setElement#0;class#Board#0" expanded="false" />
             <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
             <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
@@ -1014,26 +1122,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/sudoku/model/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
-          <folding>
-            <element signature="method#Board#0;class#Board#0" expanded="false" />
-            <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
-            <element signature="method#setElement#0;class#Board#0" expanded="false" />
-            <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
-            <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
-            <element signature="method#checkSubGrid#0;class#Board#0" expanded="false" />
-            <element signature="method#isSolved#0;class#Board#0" expanded="false" />
-            <element signature="method#reset#0;class#Board#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sudoku/dialog/SudokuDialog.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1300">
+        <state relative-caret-position="1092">
           <caret line="102" column="7" lean-forward="false" selection-start-line="102" selection-start-column="7" selection-end-line="102" selection-end-column="7" />
           <folding>
             <element signature="method#SudokuDialog#1;class#SudokuDialog#0" expanded="false" />
@@ -1047,12 +1138,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/sudoku/model/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="54" lean-forward="false" selection-start-line="12" selection-start-column="54" selection-end-line="12" selection-end-column="54" />
+          <folding>
+            <element signature="method#Board#0;class#Board#0" expanded="false" />
+            <element signature="method#ruleChecker#0;class#Board#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="true" />
+            <element signature="e#1979#1980#0" expanded="true" />
+            <element signature="method#setElement#0;class#Board#0" expanded="false" />
+            <element signature="method#checkHorizontal#0;class#Board#0" expanded="false" />
+            <element signature="method#checkVertical#0;class#Board#0" expanded="false" />
+            <element signature="method#checkSubGrid#0;class#Board#0" expanded="false" />
+            <element signature="method#isSolved#0;class#Board#0" expanded="false" />
+            <element signature="method#reset#0;class#Board#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/sudoku/dialog/BoardPanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="53" column="28" lean-forward="false" selection-start-line="53" selection-start-column="28" selection-end-line="53" selection-end-column="28" />
+        <state relative-caret-position="2751">
+          <caret line="138" column="9" lean-forward="false" selection-start-line="138" selection-start-column="9" selection-end-line="138" selection-end-column="9" />
           <folding>
-            <element signature="method#playSound#0;class#BoardPanel#0" expanded="false" />
             <element signature="method#highlightSelected#0;class#BoardPanel#0" expanded="false" />
           </folding>
         </state>
