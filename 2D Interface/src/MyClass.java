@@ -9,7 +9,7 @@ public class MyClass {
             System.out.println("TRUUUU");
         }
     }
-    public static void main(String[] args) {
-        test();
-    }
+//    public static void main(String[] args) {
+//        test();
+//    }
 }
