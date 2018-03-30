@@ -1,6 +1,8 @@
-public class Moon extends Planet {
-    Moon(int x,int y) {
-        super();
+import java.awt.*;
+
+public class Moon extends OrbitingBody {
+
+    Moon(int x, int y, Color color) {
 
     }
 }

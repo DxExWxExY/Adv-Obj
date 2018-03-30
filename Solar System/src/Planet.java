@@ -1,25 +1,23 @@
 import java.awt.*;
 
-public class Planet extends Star implements CelestialBody {
-    private int centerX, centerY;
+@SuppressWarnings("serial")
+public class Planet extends OrbitingBody implements Orbit {
+//    private Moon moon;
+//    private Moon eris;
 
 
-    Planet(int x, int y) {
-        this.centerX = x;
-        this.centerY = y;
+    Planet(int x, int y, Color color) {
+        super.x = x;
+        super.y = y;
+//        moon = new Moon();
+//        eris = new Moon();
+        this.color = color;
     }
 
-    private int calX(){
-        int center =dim.width/2;
-        return (int) (center + distance * Math.cos(Math.toRadians(angle)));
+    public int calX(int distance, int angle){
+        return (int) (x + distance * Math.cos(Math.toRadians(angle)));
     }
-    public int calY(){
-        int center =dim.height/2;
-        return (int) (center + distance * Math.sin(Math.toRadians(angle)));
-    }
-
-    @Override
-    public void draw(Graphics g) {
-
+    public int calY(int distance, int angle){
+        return (int) (y + distance * Math.sin(Math.toRadians(angle)));
     }
 }
