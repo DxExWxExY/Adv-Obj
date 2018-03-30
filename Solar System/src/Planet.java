@@ -2,16 +2,13 @@ import java.awt.*;
 
 @SuppressWarnings("serial")
 public class Planet extends OrbitingBody implements Orbit {
-//    private Moon moon;
-//    private Moon eris;
 
 
     Planet(int x, int y, Color color) {
         super.x = x;
         super.y = y;
-//        moon = new Moon();
-//        eris = new Moon();
-        this.color = color;
+        super.color = color;
+        super.radius = (x+y)/15;
     }
 
     public int calX(int distance, int angle){
@@ -19,5 +16,9 @@ public class Planet extends OrbitingBody implements Orbit {
     }
     public int calY(int distance, int angle){
         return (int) (y + distance * Math.sin(Math.toRadians(angle)));
+    }
+
+    public void setPlanetPosition() {
+
     }
 }

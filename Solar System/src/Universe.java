@@ -39,12 +39,12 @@ public class Universe extends JPanel {
      * @param params Parameter name-value pairs. A parameter name and its value is separated
      *               by a "=" sign, e.g., "width=300".
      */
-    protected Universe(String[] params) {
+    private Universe(String[] params) {
         parseParameters(params);
     }
 
     /** Called after an instance is created. */
-    public void init() {
+    private void init() {
         dim = getSize();
         sun = new Sun();
         sun.init(dim);
@@ -60,7 +60,7 @@ public class Universe extends JPanel {
     }
 
     /** Called when the start button is clicked. */
-    public void start() {
+    private void start() {
         timer.start();
     }
 
@@ -91,7 +91,7 @@ public class Universe extends JPanel {
      *
      * @param name Parameter name.
      * @return Value of the named parameter, or null if there is no such parameter. */
-    public String getParameter(String name) {
+    private String getParameter(String name) {
         return parameters.get(name);
     }
 
@@ -117,7 +117,7 @@ public class Universe extends JPanel {
         try {
             int parsedValue = Integer.parseInt(value);
             return parsedValue <= 0 ? defaultValue : parsedValue;
-        } catch (NumberFormatException e) {
+        } catch (NumberFormatException ignored) {
         }
         return defaultValue;
     }
@@ -136,7 +136,7 @@ public class Universe extends JPanel {
     }
 
     /** Show this Universe in a Swing Jframe with control buttons. */
-    public void run() {
+    private void run() {
         JFrame frame = new JFrame();
         frame.setContentPane(createUI());
         frame.pack();

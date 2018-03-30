@@ -3,28 +3,27 @@ import java.awt.*;
 @SuppressWarnings("serial")
 public class Sun implements Orbit {
     private Dimension dim;
-    private OrbitingBody earth;
-    private OrbitingBody mars;
+    private OrbitingBody p1,p2;
     private int x, y;
-    private int earthD = 150;
-    private int marsD = 280;
-    private int earthA = 150;
-    private int marsA = 280;
-    private int radius = 80;
+    private int radius = 100;
+    private int p1D = 170;
+    private int p1A = 170;
+    private int p2D = 280;
+    private int p2A = 280;
 
     public void init(Dimension dim) {
         this.dim = dim;
         this.y = dim.height/2;
         this.x = dim.width/2;
-        earth = new Planet(calX(earthD, earthD), calY(earthD, earthD), Color.BLUE);
-        mars = new Planet(calX(marsD,marsD), calY(marsD,marsD), Color.RED);
+        p1 = new Planet(calX(p1D, p1A), calY(p1D, p1A), Color.BLUE);
+        p2 = new Planet(calX(p2D,p2A), calY(p2D,p2A), Color.RED);
     }
 
     public void setPlanetPosition() {
-        earth.setPosition(calX(earthD, earthA), calY(earthD, earthA));
-        mars.setPosition(calX(marsD, marsA), calY(marsD, marsA));
-        marsA++;
-        earthA++;
+        p1.setPosition(calX(p1D,p1A), calY(p1D,p1A));
+        p2.setPosition(calX(p2D,p2A), calY(p2D,p2A));
+        p1A+=2;
+        p2A++;
     }
 
     public int calX(int distance, int angle){
@@ -36,9 +35,9 @@ public class Sun implements Orbit {
 
     public void draw(Graphics g) {
         g.setColor(Color.YELLOW);
-        g.fillOval(x-radius, y-radius, radius*2, radius*2);
+        g.fillOval(x - radius, y - radius, radius * 2, radius * 2);
         setPlanetPosition();
-        earth.draw(g);
-        mars.draw(g);
+        p1.draw(g);
+        p2.draw(g);
     }
 }
