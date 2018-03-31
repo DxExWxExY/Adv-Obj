@@ -10,6 +10,10 @@ public abstract class OrbitingBody {
         this.y = y;
     }
 
+    public void setOrbitPosition() {
+
+    }
+
     public void draw(Graphics g) {
         g.setColor(color);
         g.fillOval(x-radius, y-radius, radius*2, radius*2);

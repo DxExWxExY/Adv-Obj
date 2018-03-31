@@ -16,11 +16,11 @@ import javax.swing.JPanel;
 @SuppressWarnings("serial")
 public class Universe extends JPanel {
 
-    private static final int DEFAULT_WIDTH = 700;
-    private static final int DEFAULT_HEIGHT = 700;
+    private static final int DEFAULT_WIDTH = 900;
+    private static final int DEFAULT_HEIGHT = 900;
     private Map<String, String> parameters = new HashMap<>();
     private JLabel statusBar = new JLabel();
-    private Dimension dim;
+    protected Dimension dim;
     private Sun sun;
     private Timer timer;
 
